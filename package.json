@@ -1,0 +1,25 @@
+{
+  "name": "odin-rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "Play rock paper scissors vs a computer",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaybells12/odin-rock-paper-scissors.git"
+  },
+  "keywords": [
+    "odin",
+    "project",
+    "typescript",
+    "game"
+  ],
+  "author": "JayBells12",
+  "license": "(MIT or Apache-2.0)",
+  "bugs": {
+    "url": "https://github.com/jaybells12/odin-rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/jaybells12/odin-rock-paper-scissors/index.html"
+}
