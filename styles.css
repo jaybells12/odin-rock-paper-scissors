@@ -1,0 +1,256 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #030b1a;
+  --main-text-color: #ede8d5;
+}
+
+html {
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  font-size: 16px;
+}
+
+
+.pink {
+  --color-0: #ffa9f0;
+  --color-1: #ff75d8;
+  --color-2: #ff57c6;
+  --color-3: #ff36b5;
+  --color-4: #9e2876;
+  --color-5: #742e5e;
+}
+
+.blue {
+  --color-0: #ffffff;
+  --color-1: #45ffff;
+  --color-2: #10c6cc;
+  --color-3: #035b75;
+  --color-4: #03545f;
+  --color-5: #052f3b;
+}
+
+.yellow {
+  --color-0: #fffe83;
+  --color-1: #ffe73f;
+  --color-2: #ffca2d;
+  --color-3: #d67c14;
+  --color-4: #b26f21;
+  --color-5: #734f2c;
+}
+
+.neon-text {
+  font-family: "Raleway", sans-serif;
+  color: var(--color-0);
+  text-shadow:
+    1px 0 8px var(--color-1), 0 1px 8px var(--color-1), -1px 0 8px var(--color-1), 0 -1px 8px var(--color-1),
+    2px 0 7px var(--color-2), 0 2px 7px var(--color-2), -2px 0 7px var(--color-2), 0 -2px 7px var(--color-2),
+    3px 0 6px var(--color-3), 0 3px 6px var(--color-3), -3px 0 6px var(--color-3), 0 -3px 6px var(--color-3),
+    4px 0 5px var(--color-4), 0 4px 5px var(--color-4), -4px 0 5px var(--color-4), 0 -4px 5px var(--color-4),
+    5px 0 13px var(--color-5), 0 5px 13px var(--color-5), -5px 0 13px var(--color-5), 0 -5px 13px var(--color-5);
+}
+
+#game__title {
+  writing-mode: vertical-rl;
+  font-size: clamp(2vw, 10vw, 10rem);
+  margin: 0 auto;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#game__title span {
+  transform: rotate(90deg);
+}
+
+#game__title span {
+  padding: 0 1rem;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#scoreboard {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: -4rem;
+}
+
+.score {
+  font-size: clamp(2vw, 10vw, 10rem);
+}
+
+#gameboard {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -8rem;
+}
+
+.selection--wrapper {
+  --directional: -30deg;
+  transform-origin: -50%;
+}
+
+.selection--wrapper:has(#computer_selection) {
+  --directional: 30deg;
+  transform-origin: 150%;
+}
+
+#player_selection {
+  transform: rotate(90deg) rotateY(180deg);
+}
+
+#computer_selection {
+  transform: rotate(-90deg);
+  filter: grayscale(100%) brightness(150%);
+}
+
+
+#choiceboard {
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 0rem;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: clamp(100px, 20%, 200px);
+}
+
+.choice__img {
+  width: 100%;
+  max-height: 333px;
+  margin-bottom: -4rem;
+}
+
+.choice__text {
+  width: 100%;
+  max-width: min-content;
+  height: 103px;
+}
+
+.choice:hover {
+  filter: brightness(130%);
+}
+
+#results {
+  font-size: clamp(2vw, 10vw, 10rem);
+  position: absolute;
+  top: 35%;
+  left: 40%;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #030b1ae0;
+  position: relative;
+}
+
+#game, h1 {
+  position: relative;
+  z-index: -1;
+}
+
+#help {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  min-width: 200px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#help {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  padding: 0.25em 1em;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* @keyframes play-round {
+
+} */

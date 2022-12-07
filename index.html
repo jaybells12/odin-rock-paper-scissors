@@ -5,51 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
     <script type="text/javascript" src="./dist/index.js"></script>
   </head>
   <body>
     <header>
-      <h1>Rock Paper Scissors</h1>
+      <div id="overlay">
+        <h1 id="game__title">
+          <span class="neon-text pink">Rock</span>
+          <span class="neon-text blue">Paper</span>
+          <span class="neon-text yellow">Scissors</span>
+        </h1>
+      </div>
     </header>
     <main>
-      <section id="help">How to Play Section</section>
-      <section id="game">
+      <div id="overlay">
+        <section id="help">
+          <h2 class="underline">How to play</h2>
+          <p>
+            Welcome to Rock, Paper, Scissors! This version is played against the
+            computer.
+          </p>
+          <p>
+            Choose either Rock, Paper, or Scissors. Your choice is matched
+            against the computer's choice.
+          </p>
+          <p>The winner is determined according to this chart:</p>
+          <p>Rock beats Scissors</p>
+          <p>Paper beats Rock</p>
+          <p>Scissors beats Paper</p>
+          <p>First to reach 5 points wins.</p>
+          <p>Good luck!</p>
+        </section>
+        <section id="game">
+          <section id="scoreboard">
+            <p id="player_score" class="score neon-text pink">0</p>
+            <p id="computer_score" class="score neon-text blue">0</p>
+          </section>
+          <section id="gameboard">
+            <div class="selection--wrapper">
+              <img
+                id="player_selection"
+                class="selection"
+                src="./assets/rock.svg"
+                alt="player starting position"
+              />
+            </div>
+            <div class="selection--wrapper">
+              <img
+                id="computer_selection"
+                class="selection"
+                src="./assets/rock.svg"
+                alt="computer starting position"
+              />
+            </div>
+          </section>
+          <section id="choiceboard">
+            <div id="rock" class="choice">
+              <img class="choice__img" src="./assets/rock.svg" alt="" />
+              <img class="choice__text" src="./assets/rock-text.svg" alt="" />
+            </div>
+            <div id="paper" class="choice">
+              <img class="choice__img" src="./assets/paper.svg" alt="" />
+              <img class="choice__text" src="./assets/paper-text.svg" alt="" />
+            </div>
+            <div id="scissors" class="choice">
+              <img class="choice__img" src="./assets/scissors.svg" alt="" />
+              <img
+                class="choice__text"
+                src="./assets/scissors-text.svg"
+                alt=""
+              />
+            </div>
+          </section>
+        </section>
         <section id="outcome">
-          <p id="results">Result string goes here.</p>
+          <p id="results" class="neon-text pink">Draw</p>
         </section>
-        <section id="scoreboard">
-          <p id="player_score" class="score">Player Score</p>
-          <p id="computer_score" class="score">Computer Score</p>
-        </section>
-        <section id="gameboard">
-          <img
-            id="player_selection"
-            class="selection"
-            src="./assets/scissors.svg"
-            alt="player starting position"
-          />
-          <img
-            id="computer_selection"
-            class="selection"
-            src="./assets/rock.svg"
-            alt="computer starting position"
-          />
-        </section>
-        <section id="choiceboard">
-          <div id="rock" class="choice">
-            <img src="" alt="" />
-            <img src="" alt="" />
-          </div>
-          <div id="paper" class="choice">
-            <img src="" alt="" />
-            <img src="" alt="" />
-          </div>
-          <div id="scissors" class="choice">
-            <img src="" alt="" />
-            <img src="" alt="" />
-          </div>
-        </section>
-      </section>
+      </div>
     </main>
   </body>
   <map name="rock-map">
