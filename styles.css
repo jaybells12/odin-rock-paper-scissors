@@ -72,6 +72,9 @@ html {
   font-size: 16px;
 }
 
+.underline {
+  text-decoration: underline;
+}
 
 .pink {
   --color-0: #ffa9f0;
@@ -155,6 +158,7 @@ html {
 .selection--wrapper {
   --directional: -30deg;
   transform-origin: -50%;
+  animation: play-round ease-in 0.5s 4 forwards;
 }
 
 .selection--wrapper:has(#computer_selection) {
@@ -247,10 +251,16 @@ h2 {
   padding: 0.25em 1em;
 }
 
-.underline {
-  text-decoration: underline;
+@keyframes play-round {
+  0% {
+    transform: rotate(0);
+  }
+
+  67% {
+    transform: rotate(var(--directional));
+  }
+
+  100% {
+    transform: rotate(0);
+  }
 }
-
-/* @keyframes play-round {
-
-} */
