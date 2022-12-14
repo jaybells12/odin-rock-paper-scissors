@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="132.82083mm"
-   height="171.71458mm"
-   viewBox="0 0 132.82083 171.71458"
+   width="300"
+   height="300"
+   viewBox="0 0 150 150"
    version="1.1"
    id="svg2749"
    inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
-   sodipodi:docname="scissors.svg"
+   sodipodi:docname="scissors-new.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -23,24 +23,26 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
-     inkscape:document-units="mm"
+     inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="0.5986532"
-     inkscape:cx="472.72778"
-     inkscape:cy="541.21485"
+     inkscape:zoom="5.14"
+     inkscape:cx="107.58755"
+     inkscape:cy="170.03891"
      inkscape:window-width="1920"
      inkscape:window-height="851"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:lockguides="false" />
   <defs
      id="defs2746" />
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="Scissors"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(20.004164,-5.1873527)">
+     transform="translate(28.593748,-16.044645)">
     <image
        class="cls-3"
        width="77.787498"
@@ -121,6 +123,7 @@
        class="cls-16"
        d="m 39.415962,130.03893 v -3.91583 a 13.229167,13.229167 0 0 1 13.229166,-13.22917 v 0 M 72.981003,38.654498 a 7.4612499,7.4612499 0 0 0 -8.424333,6.35 L 58.622066,85.779435 52.711274,45.112977 a 7.4586041,7.4586041 0 1 0 -14.771687,2.076979 l 4.333875,30.82925 a 7.9374999,7.9374999 0 0 0 -13.110104,6.016625 v 7.162271 a 7.9374999,7.9374999 0 1 0 -15.861771,0 v 21.505328 c 0,15.84061 11.953875,29.67303 27.762729,30.69167 16.285104,1.05833 31.720895,-11.2395 31.720895,-30.51704 0,-25.455563 0,-16.949209 6.545792,-65.815104 A 7.4586041,7.4586041 0 0 0 72.991586,38.643915 Z M 42.252295,77.931893 m -21.013208,5.334 v 0 a 7.9374999,7.9374999 0 0 0 -7.9375,7.9375 v 9.683747 a 7.9374999,7.9374999 0 0 0 7.9375,7.9375 v 0 a 7.9374999,7.9374999 0 0 0 7.9375,-7.9375 v -9.683747 a 7.9374999,7.9374999 0 0 0 -7.9375,-7.9375 z m 23.79927,14.139333 V 84.035831 a 7.9374999,7.9374999 0 0 0 -7.9375,-7.9375 v 0 a 7.9374999,7.9374999 0 0 0 -7.937499,7.9375 v 13.369395 m 43.621853,15.478124 v 0 A 15.478125,15.478125 0 0 0 57.309732,97.405226 H 33.216774 a 4.1010416,4.1010416 0 0 0 -4.101041,4.103684 v 0 A 11.377083,11.377083 0 0 0 40.492816,112.886 h 12.170833"
        id="path1594"
-       style="fill:none;stroke:#ffff8f;stroke-width:0.502708px;stroke-linecap:round;stroke-linejoin:round" />
+       style="fill:none;stroke:#ffff8f;stroke-width:0.502708px;stroke-linecap:round;stroke-linejoin:round"
+       inkscape:label="path1594" />
   </g>
 </svg>

@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="137.31874mm"
-   height="152.66458mm"
-   viewBox="-7 0 137.31874 152.66458"
+   width="300"
+   height="300"
+   viewBox="-1 0 150 150"
    version="1.1"
    id="svg2621"
    inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
-   sodipodi:docname="paper.svg"
+   sodipodi:docname="paper-new.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -23,11 +23,11 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
-     inkscape:document-units="mm"
+     inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="0.5986532"
-     inkscape:cx="420.94488"
-     inkscape:cy="486.09111"
+     inkscape:zoom="4.9566667"
+     inkscape:cx="124.17619"
+     inkscape:cy="121.45259"
      inkscape:window-width="1920"
      inkscape:window-height="851"
      inkscape:window-x="0"
@@ -40,7 +40,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(6.3424134,-20.015924)">
+     transform="translate(12.683043,-21.348215)">
     <image
        class="cls-3"
        width="79.904167"
