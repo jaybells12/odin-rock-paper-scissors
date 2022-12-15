@@ -12,105 +12,101 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <script type="text/javascript" src="./dist/index.js"></script>
+    <link rel="preload" as="image" href="./assets/paper-player.svg" />
+    <link rel="preload" as="image" href="./assets/paper-comp.svg" />
+    <link rel="preload" as="image" href="./assets/scissors-player.svg" />
+    <link rel="preload" as="image" href="./assets/scissors-comp.svg" />
+    <script type="text/javascript" src="./dist/index.js" defer></script>
   </head>
   <body>
-    <header>
-      <div id="overlay">
-        <h1 id="game__title">
-          <span class="neon-text pink">Rock</span>
-          <span class="neon-text blue">Paper</span>
-          <span class="neon-text yellow">Scissors</span>
-        </h1>
-      </div>
+    <header class="overlay">
+      <h1 id="game__title">
+        <span class="neon-text pink">ROCK</span>
+        <span class="neon-text blue">PAPER</span>
+        <span class="neon-text yellow">SCISSORS</span>
+      </h1>
     </header>
     <main>
-      <div id="overlay">
-        <section id="help">
-          <h2 class="underline">How to play</h2>
-          <p>
-            Welcome to Rock, Paper, Scissors! This version is played against the
-            computer.
-          </p>
-          <p>
-            Choose either Rock, Paper, or Scissors. Your choice is matched
-            against the computer's choice.
-          </p>
-          <p>The winner is determined according to this chart:</p>
-          <p>Rock beats Scissors</p>
-          <p>Paper beats Rock</p>
-          <p>Scissors beats Paper</p>
-          <p>First to reach 5 points wins.</p>
-          <p>Good luck!</p>
+      <section id="help" class="overlay">
+        <h2 class="underline">How to play</h2>
+        <p>
+          Welcome to Rock, Paper, Scissors! This version is played against the
+          computer.
+        </p>
+        <p>
+          Choose either Rock, Paper, or Scissors. Your choice is matched against
+          the computer's choice.
+        </p>
+        <p>The winner is determined according to this chart:</p>
+        <p>Rock beats Scissors</p>
+        <p>Paper beats Rock</p>
+        <p>Scissors beats Paper</p>
+        <p>First to reach 5 points wins.</p>
+        <p>Good luck!</p>
+      </section>
+      <section id="game" class="overlay">
+        <section id="scoreboard">
+          <p id="player_score" class="score neon-text green">0</p>
+          <p id="computer_score" class="score neon-text red">0</p>
         </section>
-        <section id="game">
-          <section id="scoreboard">
-            <p id="player_score" class="score neon-text pink">0</p>
-            <p id="computer_score" class="score neon-text blue">0</p>
-          </section>
-          <section id="gameboard">
-            <div class="selection--wrapper">
-              <img
-                id="player_selection"
-                class="selection"
-                src="./assets/rock.svg"
-                alt="player starting position"
-              />
-            </div>
-            <div class="selection--wrapper">
-              <img
-                id="computer_selection"
-                class="selection"
-                src="./assets/rock.svg"
-                alt="computer starting position"
-              />
-            </div>
-          </section>
-          <section id="choiceboard">
-            <div id="rock" class="choice">
-              <img class="choice__img" src="./assets/rock.svg" alt="" />
-              <img class="choice__text" src="./assets/rock-text.svg" alt="" />
-            </div>
-            <div id="paper" class="choice">
-              <img class="choice__img" src="./assets/paper.svg" alt="" />
-              <img class="choice__text" src="./assets/paper-text.svg" alt="" />
-            </div>
-            <div id="scissors" class="choice">
-              <img class="choice__img" src="./assets/scissors.svg" alt="" />
-              <img
-                class="choice__text"
-                src="./assets/scissors-text.svg"
-                alt=""
-              />
-            </div>
-          </section>
+        <section id="gameboard">
+          <div class="selection--wrapper">
+            <img
+              id="player_selection"
+              class="selection"
+              src="./assets/rock-player.svg"
+              alt="player fist and choice"
+            />
+          </div>
+          <div class="selection--wrapper">
+            <img
+              id="computer_selection"
+              class="selection"
+              src="./assets/rock-comp.svg"
+              alt="computer fist and choice"
+            />
+          </div>
         </section>
-        <section id="outcome">
-          <p id="results" class="neon-text pink">Draw</p>
+        <section id="choiceboard">
+          <div id="rock" class="choice" data-value="rock">
+            <img class="choice__img" src="./assets/rock-icon.svg" alt="rock" />
+            <img
+              class="choice__text"
+              src="./assets/rock-text.svg"
+              alt="choose rock"
+            />
+          </div>
+          <div id="paper" class="choice" data-value="paper">
+            <img
+              class="choice__img"
+              src="./assets/paper-icon.svg"
+              alt="paper"
+            />
+            <img
+              class="choice__text"
+              src="./assets/paper-text.svg"
+              alt="choose paper"
+            />
+          </div>
+          <div id="scissors" class="choice" data-value="scissors">
+            <img
+              class="choice__img"
+              src="./assets/scissors-icon.svg"
+              alt="scissors"
+            />
+            <img
+              class="choice__text"
+              src="./assets/scissors-text.svg"
+              alt="choose scissors"
+            />
+          </div>
         </section>
-      </div>
+      </section>
+      <section id="outcome">
+        <p id="results" class="neon-text pink overlay">DDD</p>
+      </section>
     </main>
   </body>
-  <map name="rock-map">
-    <a href="#">
-      <area
-        shape="poly"
-        coords="122,197,122,307,130,339,144,361,158,379,180,395,198,401,222,407,246,411,270,407,288,403,310,397,332,383,352,367,366,351,376,331,384,313,390,289,388,267,386,249,376,235,376,151,364,133,348,123,330,125,314,137,300,125,282,123,264,127,252,137,234,125,216,121,198,129,182,147,178,169,166,161,148,163,130,173"
-      />
-    </a>
-  </map>
-  <map name="paper-map">
-    <area
-      shape="poly"
-      coords="122,191,122,369,130,397,140,417,156,435,174,447,196,455,220,457,248,455,272,447,292,437,308,425,324,407,396,331,398,317,392,305,376,293,354,289,334,297,322,307,322,171,312,155,296,145,282,145,274,151,270,137,258,125,244,123,228,125,218,133,206,125,194,121,178,125,164,141,164,167,150,163,136,165,126,177"
-    />
-  </map>
-  <map name="scissors-map">
-    <area
-      shape="poly"
-      coords="118,323,118,411,122,433,130,457,138,477,152,495,172,513,192,523,216,529,246,533,272,527,296,517,322,499,342,473,354,445,360,407,360,339,386,151,374,127,352,115,326,121,312,143,298,247,282,137,266,121,242,117,220,127,210,151,224,261,202,261,186,273,176,291,160,285,136,289,120,305"
-    />
-  </map>
 </html>
 <!-- Document outline:
 1: How to Play
