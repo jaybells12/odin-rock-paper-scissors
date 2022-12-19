@@ -23,8 +23,9 @@ function gameLoop(): void {
   };
   let throttled: boolean = false;
 
-  // The player click starts and progresses the game loop.
+  // The click event starts and progresses the game loop.
   function playRound(e: Event): void {
+    //  throttle here to prevent repeated function execution caused by rapid clicking
     if (throttled) return;
     throttled = true;
 
@@ -50,8 +51,10 @@ function gameLoop(): void {
       const computerInput: string = getComputerChoice();
       const outcome: string = calcWinner(playerInput, computerInput);
 
+      // Start each round with each hand displayed as rock
       insertHandSelections(playerHand, "rock", computerHand, "rock");
       animateHands(hands);
+
       // Timeout here to change the image of the hands just before the animation finishes,
       // this gives a more natural look and feel to the transition. animation length is currently 1600ms
       setTimeout(
@@ -65,13 +68,10 @@ function gameLoop(): void {
         1550
       );
 
-      // Timeout here to allow the animation to finish and half a second to pass for the player to see the hands of the game board,
-      // then the outcome is displayed in text, while everything else is faded. The user must click to continue playing.
-      // Timings to manipulate:
-      //      animation length: (1600) + delay(600)
-      //      transition duration: 250ms
+      // Timeout here to wait for animation to finish playing, could use event listener (on animation end)
       setTimeout(() => {
-        nextRound(outcome, hands, scores, playerScore, computerScore);
+        updateScoreboard(scores, playerScore, computerScore, outcome);
+        removeAnimateHandClass(hands);
         isGameOver(
           resultsElement,
           overlayElements,
@@ -80,7 +80,7 @@ function gameLoop(): void {
           computerScore
         );
         throttled = false;
-      }, 2200);
+      }, 1600);
     } catch (err: any) {
       console.log(`Error: ${err}`);
     }
@@ -144,8 +144,15 @@ function insertHandSelections(
 function updateScoreboard(
   scores: ScoreCard,
   playerScore: HTMLElement,
-  computerScore: HTMLElement
+  computerScore: HTMLElement,
+  outcome: String = ""
 ): void {
+  if (outcome === "Win") {
+    scores.player += 1;
+  } else if (outcome === "Lose") {
+    scores.computer += 1;
+  }
+
   playerScore.innerText = `${scores.player}`;
   computerScore.innerText = `${scores.computer}`;
 }
@@ -175,32 +182,10 @@ function activateOverlay(
   );
 }
 
-function nextRound(
-  resultsString: string,
-  hands: HTMLCollection,
-  scores: ScoreCard,
-  playerScore: HTMLElement,
-  computerScore: HTMLElement
-): void {
-  // Can insert logic here for game reset, IE reaching 5 points
-  if (resultsString === "Win") {
-    scores.player += 1;
-  } else if (resultsString === "Lose") {
-    scores.computer += 1;
-  }
-
-  // for (let i = 0; i < overlayElements.length; i++) {
-  //   overlayElements[i].classList.remove("fade");
-  // }
-
+function removeAnimateHandClass(hands: HTMLCollection): void {
   for (let i = 0; i < hands.length; i++) {
     hands[i].classList.remove("animateHand");
   }
-
-  // resultsElement.innerText = "";
-
-  updateScoreboard(scores, playerScore, computerScore);
-  // insertHandSelections(pHand, "rock", cHand, "rock");
 }
 
 function isGameOver(
@@ -234,8 +219,8 @@ function isGameOver(
 function resetGame(
   e: Event,
   scores: ScoreCard,
-  pScoreElement: HTMLElement,
-  cScoreElement: HTMLElement,
+  playerScore: HTMLElement,
+  computerScore: HTMLElement,
   overlayElements: HTMLCollection,
   resultsElement: HTMLElement
 ): void {
@@ -249,7 +234,8 @@ function resetGame(
   }
 
   resultsElement.innerText = "";
-  updateScoreboard(scores, pScoreElement, cScoreElement);
+  updateScoreboard(scores, playerScore, computerScore);
 }
+
 // Initialize
 gameLoop();
